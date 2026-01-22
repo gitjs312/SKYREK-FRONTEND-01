@@ -11,14 +11,14 @@ export function createUser(req, res) {
     user.save().then(
         ()=>{
             req.json({
-                message: "user created successfully"
+                message: "user created successfully..."
             })
             
         }
     ).catch(
         ()=> {
             res.json({
-                message:"user creation failed"
+                message:"user creation failed..."
             })
         }
     )
