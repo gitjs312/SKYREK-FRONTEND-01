@@ -1,0 +1,26 @@
+{
+  "name": "skyrek-frontend-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitjs312/SKYREK-FRONTEND-01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitjs312/SKYREK-FRONTEND-01/issues"
+  },
+  "homepage": "https://github.com/gitjs312/SKYREK-FRONTEND-01#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "8.10",
+    "nodemon": "^3.1.11"
+  }
+}
