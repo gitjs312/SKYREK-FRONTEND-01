@@ -2,6 +2,10 @@ import express from 'express'
 
 import mongoose from 'mongoose'
 import userRouter from './routers/userRouter.js';
+import productRouter from './routers/productRouter.js';
+import authorizeUser from './lib/jwtMiddleware.js';
+
+
 
 
 
@@ -15,13 +19,15 @@ mongoose.connect(mongoURI)
     console.log("MongoDB connection error:", err)
 })
 
-let app=express();
+let app = express();
 
 app.use(express.json());
 
-app.use("/Users",userRouter)
+app.use(authorizeUser)
 
+app.use("/Users", userRouter)
+app.use("/Products", productRouter)
 
 app.listen(3000, ()=>{
     console.log("server started...")
-});
+})
