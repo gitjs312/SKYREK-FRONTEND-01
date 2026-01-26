@@ -23,10 +23,10 @@ let app = express();
 
 app.use(express.json());
 
-app.use(authorizeUser)
+//app.use(authorizeUser)
 
 app.use("/Users", userRouter)
-app.use("/Products", productRouter)
+app.use("/Products", authorizeUser , productRouter)
 
 app.listen(3000, ()=>{
     console.log("server started...")

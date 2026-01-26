@@ -1,6 +1,7 @@
 import Product from "../models/product.js";
 import { isAdmin } from "./userController.js";
 
+
 export async function createProduct(req, res){
 
    if(!isAdmin(req)){
@@ -45,7 +46,7 @@ export async function createProduct(req, res){
 
         data.price = req.body.price;
         data.labelledPrice = req.body.labelledPrice || req.body.price;
-        data.catagory = req.body.catagory || "others";
+        data.category = req.body.catagory || "others";
         data.images = req.body.images || [
             "https://images.unsplash.com/photo-1761839258753-85d8eecbbc29"
         ];
