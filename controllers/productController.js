@@ -39,7 +39,7 @@ export async function createProduct(req, res){
 
         if(req.body.price == null){
             res.status(400).json({
-                message: "product price is required..."
+                message: "product price is required....."
             });
             return;
         }
