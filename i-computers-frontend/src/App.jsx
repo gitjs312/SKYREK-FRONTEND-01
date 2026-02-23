@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>janith</h1>
+      <h1>janith saranga</h1>
     </>
   )
 }
